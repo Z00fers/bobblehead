@@ -1,0 +1,44 @@
+body {
+  color: #779CAB;
+  padding: 20px 0 0 0;
+}
+
+.navmenu {
+  background: #122932;
+  border-right: 2px;
+  border-color: #022F40;
+  z-index: 1;
+}
+
+.nav li {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+
+main>div {
+  background: #122932;
+}
+
+.navbar {
+  width: 100%;
+  background: #022F40;
+}
+
+.navbox {
+  background: #022F40;
+  box-shadow: inset 1px 2px 5px rgba(255, 255, 255, 0.2), inset -1px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input {
+  background: #FCFFEB;
+
+}
