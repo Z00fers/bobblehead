@@ -1,3 +1,13 @@
+// $(document).ready(function () {
+//     const tag = document.querySelector("#wrapper");
+//     tag.addEventListener("transitionend", function () {
+//         alert("test");
+//         // tag.removeEventListener("transitionend", function () {
+
+//         // });
+//     });
+// })
+
 $("#menu-toggle").click(function (e) {
     e.preventDefault();
     toggleSidebar();
@@ -16,9 +26,21 @@ function toggleSidebar() {
     $(".backdrop").toggleClass("backdrop-enabled");
 };
 
-function gotoTag(tag) {
+function gotoTag(id) {
     toggleSidebar();
-    // document.querySelector("#" + tag).scrollIntoView({
-    //     behaviour: "smooth"
+
+
+
+
+
+    // const tag = document.querySelector("#wrapper");
+    // tag.addEventListener("transitionend", function () {
+    //     alert("test1");
+    //     tag.removeEventListener("transitionend", function () {
+    //         alert("test2");
+    //     });
     // });
+    document.querySelector("#" + tag).scrollIntoView({
+        behaviour: "smooth"
+    });
 };
