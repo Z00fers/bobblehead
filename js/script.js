@@ -1,12 +1,4 @@
-// $(document).ready(function () {
-//     const tag = document.querySelector("#wrapper");
-//     tag.addEventListener("transitionend", function () {
-//         alert("test");
-//         // tag.removeEventListener("transitionend", function () {
-
-//         // });
-//     });
-// })
+$(document).ready(function () { });
 
 $("#menu-toggle").click(function (e) {
     e.preventDefault();
@@ -15,32 +7,33 @@ $("#menu-toggle").click(function (e) {
 
 $(".backdrop").click(function (e) {
     e.preventDefault();
-    if ($(".backdrop").hasClass("backdrop-enabled")) {
-        toggleSidebar();
-    }
+    toggleSidebar();
 });
 
 function toggleSidebar() {
     $("#wrapper").toggleClass("toggled");
-    $("body").toggleClass("scroll-disabled");
     $(".backdrop").toggleClass("backdrop-enabled");
 };
 
-function gotoTag(id) {
+function gotoTag(tag) {
     toggleSidebar();
-
-
-
-
-
-    // const tag = document.querySelector("#wrapper");
-    // tag.addEventListener("transitionend", function () {
-    //     alert("test1");
-    //     tag.removeEventListener("transitionend", function () {
-    //         alert("test2");
-    //     });
-    // });
-    document.querySelector("#" + tag).scrollIntoView({
-        behaviour: "smooth"
+    $("#wrapper").on("transitionend", function (e) {
+        $(this).off(e);
+        var element = document.querySelector(tag);
+        if (element == null) return;
+        var $container = $(".container-fluid"), $scrollTo = $(tag);
+        // alert($scrollTo.offset().top + " " + 5 * getEmPxValue());
+        // bug with viewport, goes after pixel value on viewport and not absolute px
+        $container.animate({
+            scrollTop: $scrollTo.offset().top - 5 * getEmPxValue()
+        }, 1000);
     });
-};
+}
+
+function getEmPxValue() {
+    var div = document.getElementById("emToPx");
+    div.style.height = '1em';
+    var pxValue = div.offsetHeight;
+    div.style.height = '0';
+    return pxValue;
+}
