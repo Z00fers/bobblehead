@@ -1,10 +1,3 @@
-/* reset css */
-
-p {
-    padding: 0;
-    margin: 0;
-}
-
 /* wrapper styling */
 
 html, body {
@@ -19,8 +12,6 @@ html, body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    width: 100%;
-    height: 100%;
 }
 
 #wrapper.toggled {
@@ -35,9 +26,7 @@ html, body {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow-y: auto;
-    height: 100%;
     width: 0;
-    position: fixed;
     left: 80%;
     z-index: 0;
     margin-left: -80%;
@@ -49,20 +38,8 @@ html, body {
 
 /* content wrapper styling */
 
-#page-content-wrapper {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
 #wrapper.toggled #page-content-wrapper {
     margin-right: -80%;
-}
-
-.container-fluid {
-    width: 100%;
-    height: 100%;
-    padding: 0;
 }
 
 /* sidebar styling */
@@ -80,14 +57,10 @@ html, body {
 /* positional styling */
 
 .container-fluid {
-    position: absolute;
     overflow-y: auto;
-    height: 100%;
 }
 
 .nav-container {
-    position: fixed;
-    width: 100%;
     height: 4em;
     z-index: 1000;
 }
@@ -105,9 +78,9 @@ html, body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    position: fixed;
+    /* position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     z-index: -1;
     background-color: rgb(0, 0, 0, 0.5);
     opacity: 0;
@@ -115,7 +88,7 @@ html, body {
 
 .backdrop-enabled {
     z-index: 999;
-    opacity: 0.3;
+    opacity: 0.99;
 }
 
 /* general styling */
@@ -126,18 +99,13 @@ body {
 }
 
 .navbox {
-    width: 100%;
     height: 4em;
-    margin: auto;
     box-shadow: inset 1px 2px 5px rgba(255, 255, 255, 0.2), inset -1px -2px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
     background: #022F40;
 }
 
-.navbar-brand, .sidebar-brand {
-    display: flex;
-    align-items: center;
+.sidebar-nav {
+    background: #122932;
 }
 
 hr {
@@ -152,8 +120,7 @@ hr {
 }
 
 .nav-link {
-    width: 100%;
-    height: 100%;
+    color: #779CAB;
 }
 
 object {
@@ -161,11 +128,17 @@ object {
     pointer-events: none;
 }
 
-
-
-
 /* form styling */
 
 .form-group>input {
     background: #FCFFEB;
+}
+
+.form-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.logo {
+    height: 80%;
 }

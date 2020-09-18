@@ -1,4 +1,10 @@
-$(document).ready(function () { });
+$(document).ready(function () {
+    var logo = document.querySelector(".logo");
+    const EmPxValue = getEmPxValue();
+    logo.style.width = EmPxValue * 2;
+    logo.style.height = EmPxValue * 2;
+
+});
 
 $("#menu-toggle").click(function (e) {
     e.preventDefault();
@@ -22,10 +28,9 @@ function gotoTag(tag) {
         var element = document.querySelector(tag);
         if (element == null) return;
         var $container = $(".container-fluid"), $scrollTo = $(tag);
-        // alert($scrollTo.offset().top + " " + 5 * getEmPxValue());
-        // bug with viewport, goes after pixel value on viewport and not absolute px
+        // alert($scrollTo.offset().top + $container.scrollTop() + " " + 5 * getEmPxValue());
         $container.animate({
-            scrollTop: $scrollTo.offset().top - 5 * getEmPxValue()
+            scrollTop: $scrollTo.offset().top + $container.scrollTop() - 5 * getEmPxValue()
         }, 1000);
     });
 }

@@ -20,52 +20,74 @@
     <div class="modal fade" id="formComplete" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="formCompleteLabel">oofers</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span></span>
-                    </button>
+                <div class="modal-header d-flex justify-content-center">
+                    <h4 class="modal-title" id="formCompleteLabel">Formulär inskickat</h4>
                 </div>
                 <div class="modal-body">
-                    not poggers
+                    Du är nu uppskriven på våran email lista. Vid eventuella produktsläpp kommer vi meddela dig via
+                    mail.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                    <button type="button" class="btn btn-primary w-100" data-dismiss="modal">Close</button>
 
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- modal popup for gdpr info -->
+    <div class="modal fade" id="gdprInfo" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h4 class="modal-title" id="gdprInfoLabel">Info om GDPR</h4>
+                </div>
+                <div class="modal-body">
+                    Genom att skicka in detta formulär godkänner du att oof Inc lagrar ditt persondata i upp till 12
+                    månader i syfta att informera dig vid eventuella produktsläpp.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary w-100" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- page wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" class="w-100 h-100">
 
         <!-- sidebar wrapper -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand container navbox">TEST</li>
-                <li class="nav-item container navbox">
-                    <object class="nav-icon" type="image/svg+xml" data="assets/icons/house.svg"></object>
-                    <a class="nav-link" onclick="gotoTag('#start')">
+        <div id="sidebar-wrapper" class="h-100 position-fixed">
+            <ul class="sidebar-nav border-right border-dark">
+                <li class="sidebar-brand container navbox m-auto w-100 d-flex align-items-center font-weight-bold">
+                    <h5 class="m-0"><u>Navigering</u></h5>
+                </li>
+                <li class="nav-item container navbox m-auto w-100 d-flex align-items-center p-0">
+                    <a class="nav-link w-100 h-100 font-weight-bold d-flex align-items-center"
+                        onclick="gotoTag('#start')">
+                        <object class="nav-icon mr-2" type="image/svg+xml" data="assets/icons/house.svg"></object>
                         Start
                     </a>
                 </li>
-                <li class="nav-item container navbox">
-                    <object class="nav-icon" type="image/svg+xml" data="assets/icons/info-square.svg"></object>
-                    <a class="nav-link" onclick="gotoTag('#info')">
+                <li class="nav-item container navbox m-auto w-100 d-flex align-items-center p-0">
+                    <a class="nav-link w-100 h-100 font-weight-bold d-flex align-items-center"
+                        onclick="gotoTag('#info')">
+                        <object class="nav-icon mr-2" type="image/svg+xml" data="assets/icons/info-square.svg"></object>
                         Info
                     </a>
                 </li>
-                <li class="nav-item container navbox">
-                    <object class="nav-icon" type="image/svg+xml" data="assets/icons/card-image.svg"></object>
-                    <a class="nav-link" onclick="gotoTag('#gallery')">
-                        
+                <li class="nav-item container navbox m-auto w-100 d-flex align-items-center p-0">
+                    <a class="nav-link w-100 h-100 font-weight-bold d-flex align-items-center"
+                        onclick="gotoTag('#gallery')">
+                        <object class="nav-icon mr-2" type="image/svg+xml" data="assets/icons/card-image.svg"></object>
                         Galleri
                     </a>
                 </li>
-                <li class="nav-item container navbox">
-                    <object class="nav-icon" type="image/svg+xml" data="assets/icons/journal-text.svg"></object>
-                    <a class="nav-link w-100 h-100" onclick="gotoTag('#form')">
+                <li class="nav-item container navbox m-auto w-100 d-flex align-items-center p-0">
+                    <a class="nav-link w-100 h-100 font-weight-bold d-flex align-items-center"
+                        onclick="gotoTag('#form')">
+                        <object class="nav-icon mr-2" type="image/svg+xml"
+                            data="assets/icons/journal-text.svg"></object>
                         Intresseanmälan
                     </a>
                 </li>
@@ -73,155 +95,126 @@
         </div>
 
         <!-- main content wrapper -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
+        <div id="page-content-wrapper" class="w-100 h-100 position-fixed">
+            <div class="container-fluid w-100 h-100 p-0 position-absolute">
 
                 <!-- top navbar -->
-                <div class="nav-container">
-                    <nav class="navbar navbox">
+                <div class="nav-container w-100 position-fixed">
+                    <nav
+                        class="navbar navbox m-auto w-100 border-bottom border-dark d-flex align-items-center justify-content-between">
                         <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
-                            <object class="nav-icon d-inline" type="image/svg+xml" data="assets/icons/list.svg"></object>
-                            hurr durr
-                            <!-- <span class="navbar-toggler-icon"></span> -->
+                            <object class="nav-icon" type="image/svg+xml" data="assets/icons/list.svg"></object>
                         </a>
+                        <p class="m-0 font-weight-bold">oof Inc</p>
+                        <img class="logo" src="assets/icons/oof.svg" alt="logo" />
                     </nav>
                 </div>
 
                 <!-- hidden backdrop tag -->
-                <div class="backdrop"></div>
+                <div class="backdrop w-100 h-100 position-fixed"></div>
 
                 <!-- main content -->
                 <main class="content container">
                     <section id="start">
-                        <h1>:DDDD</h1>
-                        <!-- image with shadow -->
+                        <h1 class="text-center font-weight-bold"><u>oof Inc bobbles</u></h1>
+                        <img class="container w-80" src="assets/imgs/start.png" alt="" />
                     </section>
 
                     <hr />
 
                     <section id="info">
-                        <h1 class="text-center">OOF</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel venenatis eros. Etiam
-                            a dignissim velit. Praesent eleifend justo mi. Phasellus mauris enim, varius ac felis id,
-                            pretium pulvinar felis. Pellentesque posuere pellentesque luctus. Donec cursus semper est,
-                            sed molestie elit imperdiet in. Maecenas non egestas felis, ac lobortis libero. Praesent sed
-                            neque metus. Mauris sed augue odio.
+                        <h2 class="text-center font-weight-bold"><u>OOF</u></h2>
 
-                            Pellentesque justo lacus, semper in nulla quis, malesuada hendrerit odio. Donec porta at
-                            elit vestibulum sagittis. Cras eleifend cursus ligula. Donec quis nulla volutpat, pharetra
-                            odio non, faucibus risus. Morbi eu commodo erat. Praesent eleifend eget urna eget
-                            scelerisque. Phasellus eu ultricies tortor.
-
-                            Nullam semper, purus in porttitor interdum, diam urna tristique nunc, id rutrum nunc eros
-                            sit amet turpis. Vivamus euismod ultrices libero nec elementum. Pellentesque elementum lacus
-                            ac ligula ultricies, at tincidunt libero tristique. Quisque quis tincidunt velit. Aenean
-                            molestie magna porta nisi eleifend, ac elementum lacus consectetur. Proin eget tellus in
-                            justo rhoncus tristique a eu turpis. Maecenas finibus, dui eu fringilla finibus, purus justo
-                            tincidunt purus, ut imperdiet nulla odio non nulla. Vivamus ac congue lacus, sed imperdiet
-                            mauris.
-
-                            Suspendisse ut finibus purus, et tincidunt lorem. Nulla non interdum lectus. Proin sit amet
-                            dictum dui. Maecenas eget nunc pellentesque, lobortis lacus in, imperdiet quam. Curabitur
-                            posuere leo dui, et tincidunt urna consequat ac. Morbi nisl risus, eleifend sed nisl in,
-                            imperdiet tincidunt lorem. Integer pharetra augue commodo, vehicula orci a, tempus purus.
-                            Aenean eu tempor lectus, in fringilla elit.
-
-                            Proin vitae dignissim velit. Nam et aliquet ligula. Nunc sit amet gravida felis. Fusce ut
-                            tincidunt tellus, eu porttitor erat. Fusce volutpat quam tellus, et scelerisque quam tempor
-                            nec. Morbi sed suscipit ligula, vitae semper ligula. Ut suscipit ut nunc et egestas.
-                            Pellentesque pellentesque metus ipsum, vitae ornare elit placerat vitae. Pellentesque non
-                            suscipit neque, id sagittis erat. Nulla id mi arcu. In porttitor nisi at ligula lobortis, eu
-                            gravida dolor consequat. Quisque at tempus nunc. Nulla vestibulum, arcu ac aliquam tempor,
-                            risus risus vehicula turpis, id egestas orci eros quis purus. Cras bibendum sit amet mauris
-                            eget dapibus. Praesent at est in purus ultricies interdum ut vel lorem.
-                        </p>
                     </section>
 
                     <hr />
 
                     <section id="gallery">
-                        <div class="container">
-
-                        </div>
-                        <div id="gallery-carousel" class="carousel slide" data-ride="carousel">
+                        <h3 class="text-center font-weight-bold"><u>Bildgalleri</u></h3>
+                        <div id="gallery-carousel" class="carousel slide container" data-ride="carousel">
+                            <!-- fix to only desktop -->
                             <ol class="carousel-indicators">
                                 <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#gallery-carousel" data-slide-to="1"></li>
                                 <li data-target="#gallery-carousel" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="cariousel-item active">
-                                    <img class="d-block w-100" src="assets/imgs/carousel1.jpg" alt="placeholder1" />
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="assets/imgs/carousel1.png" alt="placeholder1" />
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>header</h5>
-                                        <p>text</p>
+                                        <!-- caption for desktop view -->
                                     </div>
                                 </div>
-                                <div class="cariousel-item">
-                                    <img class="d-block w-100" src="assets/imgs/carousel2.jpg" alt="placeholder2" />
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/imgs/carousel2.png" alt="placeholder2" />
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>header</h5>
-                                        <p>text</p>
+                                        <!-- caption for desktop view -->
                                     </div>
                                 </div>
-                                <div class="cariousel-item">
-                                    <img class="d-block w-100" src="assets/imgs/carousel3.jpg" alt="placeholder3" />
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/imgs/carousel3.png" alt="placeholder3" />
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>header</h5>
-                                        <p>text</p>
+                                        <!-- caption for desktop view -->
                                     </div>
                                 </div>
                             </div>
+                            <a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
+                                <!-- replace with svg for better color control -->
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next">
+                                <!-- replace with svg for better color control -->
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
                         </div>
-                        <a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
-                            <!-- replace with svg for better color control -->
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next">
-                            <!-- replace with svg for better color control -->
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
                     </section>
 
                     <hr />
 
                     <section id="form">
                         <div class="container">
-                            <img class="d-block w-100" src="" alt="preview_image" />
+                            <h3 class="text-center font-weight-bold"><u>Intresseanmälan</u></h3>
+                            <p>Anmäl dig till våran email-lista för att få uppdateringar om våra produkter!</p>
                             <form>
                                 <div class="form-group">
-                                    <label for="inputFirstName">Förnamn</label>
-                                    <input type="text" class="form-control" id="inputFirstName" />
+                                    <!-- <label class="font-weight-bold" for="inputFirstName">Förnamn</label> -->
+                                    <input type="text" class="form-control align-middle font-weight-light"
+                                        id="inputFirstName" placeholder="Förnamn" required />
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputLastName">Efternamn</label>
-                                    <input type="text" class="form-control" id="inputLastName" />
+                                    <!-- <label class="font-weight-bold" for="inputLastName">Efternamn</label> -->
+                                    <input type="text" class="form-control align-middle font-weight-light"
+                                        id="inputLastName" placeholder="Efternamn" required />
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail">Mailadress</label>
-                                    <input type="email" class="form-control" id="inputEmail" />
+                                    <!-- <label class="font-weight-bold" for="inputEmail">Mailadress</label> -->
+                                    <input type="email" class="form-control align-middle font-weight-light"
+                                        id="inputEmail" placeholder="Mailadress" required />
+                                    <small id="emailHelp" class="form-text"></small>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gdprCheck" />
+                                    <div class="form-check d-flex justify-content-between align-items-center">
+                                        <input class="form-check-input" type="checkbox" id="gdprCheck" required />
                                         <label class="form-check-label" for="gdprCheck">
-                                            GDPR stuff här
+                                            Jag godkänner att oof Inc hanterar mitt data i enlighet med GDPR
                                         </label>
+                                        <button type="button" class="btn p-0 m-0" data-toggle="modal"
+                                            data-target="#gdprInfo">
+                                            <object class="form-icon" type="image/svg+xml"
+                                                data="assets/icons/info-circle.svg"></object>
+                                        </button>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100">oof</button>
+                                <!-- <button type="submit" class="btn btn-primary w-100">Skicka</button> -->
+                                <button type="button" data-toggle="modal" data-target="#formComplete"
+                                    class="btn btn-primary w-100">Skicka</button>
                             </form>
                         </div>
                     </section>
                 </main>
             </div>
-
         </div>
     </div>
-
-
-
 
 
     <!-- scripts -->
