@@ -145,11 +145,11 @@ object {
 
 /* media queries */
 
-@media only screen and (min-width: 510px) {
+@media only screen and (min-width: 480px){
 
-    .img-fluid {
-        max-height: 717px;
-        max-width: 358.5px;
+    .start-picture {
+        max-height: 718px;
+        max-width: 336px;
     }
 
 }
