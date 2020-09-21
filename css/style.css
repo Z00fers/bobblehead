@@ -142,3 +142,14 @@ object {
 .logo {
     height: 80%;
 }
+
+/* media queries */
+
+@media only screen and (min-width: 510px) {
+
+    .img-fluid {
+        max-height: 717px;
+        max-width: 358.5px;
+    }
+
+}
