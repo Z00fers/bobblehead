@@ -13,3 +13,5 @@ Jag börjar med att fixa media queries och fixa till relativa bilder för webbsi
 Lyckades centrera bildgalleriet men jobbar fortfarande med att få galleriet och startbilden att gå hand i hand genom mediaqueries.
 
 Har nu skapat mediaquery för galleriet också så det ser hyfsat ut på de flesta mobilenheterna.
+
+Lade till ändringar med intresseanmälan som kanske ligger i intresse att kollas över av ägaren.

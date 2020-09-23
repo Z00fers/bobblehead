@@ -156,9 +156,17 @@ object {
 
 @media only screen and (min-width: 450px){
     
-    .test {
+    .gal-img {
         max-height: 716px;
         max-width: 358px;
+    }
+    
+}
+
+@media only screen and (max-width: 770px){
+    
+    .test {
+        display: flex;
     }
     
 }

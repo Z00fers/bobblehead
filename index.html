@@ -141,19 +141,19 @@
                                 </ol>
                                 <div class="carousel-inner text-center">
                                     <div class="carousel-item active">
-                                        <img class="img-fluid test" src="assets/imgs/carousel1.png" alt="placeholder1" />
+                                        <img class="img-fluid gal-img" src="assets/imgs/carousel1.png" alt="placeholder1" />
                                         <div class="carousel-caption d-none d-md-block">
                                             <!-- caption for desktop view -->
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid test" src="assets/imgs/carousel2.png" alt="placeholder2" />
+                                        <img class="img-fluid gal-img" src="assets/imgs/carousel2.png" alt="placeholder2" />
                                         <div class="carousel-caption d-none d-md-block">
                                             <!-- caption for desktop view -->
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="img-fluid test" src="assets/imgs/carousel3.png" alt="placeholder3" />
+                                        <img class="img-fluid gal-img" src="assets/imgs/carousel3.png" alt="placeholder3" />
                                         <div class="carousel-caption d-none d-md-block">
                                             <!-- caption for desktop view -->
                                         </div>
@@ -174,8 +174,8 @@
                     <hr />
 
                     <section id="form">
-                        <div class="container">
-                            <h3 class="text-center font-weight-bold"><u>Intresseanmälan</u></h3>
+                        <div class="container text-center">
+                            <h3 class="font-weight-bold"><u>Intresseanmälan</u></h3>
                             <p>Anmäl dig till våran email-lista för att få uppdateringar om våra produkter!</p>
                             <form>
                                 <div class="form-group">
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="form-group">
                                     <!-- <label class="font-weight-bold" for="inputLastName">Efternamn</label> -->
-                                    <input type="text" class="form-control align-middle font-weight-light"
+                                    <input type="text" class="form-control font-weight-light"
                                         id="inputLastName" placeholder="Efternamn" required />
                                 </div>
                                 <div class="form-group">
@@ -194,22 +194,24 @@
                                         id="inputEmail" placeholder="Mailadress" required />
                                     <small id="emailHelp" class="form-text"></small>
                                 </div>
-                                <div class="form-group">
-                                    <div class="form-check d-flex justify-content-between align-items-center">
-                                        <input class="form-check-input" type="checkbox" id="gdprCheck" required />
-                                        <label class="form-check-label" for="gdprCheck">
-                                            Jag godkänner att oof Inc hanterar mitt data i enlighet med GDPR
-                                        </label>
-                                        <button type="button" class="btn p-0 m-0" data-toggle="modal"
-                                            data-target="#gdprInfo">
-                                            <object class="form-icon" type="image/svg+xml"
-                                                data="assets/icons/info-circle.svg"></object>
-                                        </button>
+                                <div class="container">
+                                    <div class="form-group">
+                                        <div class="form-check test">
+                                            <input class="form-check-input" type="checkbox" id="gdprCheck" required />
+                                            <label class="form-check-label pr-1" for="gdprCheck">
+                                                Jag godkänner att oof Inc hanterar mitt data i enlighet med GDPR.
+                                            </label>
+                                            <button type="button" class="btn p-0 m-0" data-toggle="modal"
+                                                data-target="#gdprInfo">
+                                                <object class="form-icon" type="image/svg+xml"
+                                                    data="assets/icons/info-circle.svg"></object>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- <button type="submit" class="btn btn-primary w-100">Skicka</button> -->
                                 <button type="button" data-toggle="modal" data-target="#formComplete"
-                                    class="btn btn-primary w-100">Skicka</button>
+                                    class="btn btn-primary w-25">Skicka</button>
                             </form>
                         </div>
                     </section>
