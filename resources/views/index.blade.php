@@ -108,10 +108,9 @@
 
                 <!-- main content -->
                 <main class="content container">
-                    <section id="start">
-                        <h1 class="text-center font-weight-bold"><u>oof Inc bobbles</u></h1>
-                        <h4 class="text-center"></h4>
-                        <img class="container w-80" src="assets/imgs/start.png" alt="" />
+                    <section class="text-center" id="start">
+                        <h1 class="font-weight-bold"><u>oof Inc bobbles</u></h1>
+                        <img class="w-75 img-fluid start-picture" src="assets/imgs/start.png" alt="" />
                     </section>
 
                     <hr />
@@ -174,8 +173,8 @@
                     <hr />
 
                     <section id="form">
-                        <div class="container">
-                            <h3 class="text-center font-weight-bold"><u>Intresseanmälan</u></h3>
+                        <div class="container text-center">
+                            <h3 class="font-weight-bold"><u>Intresseanmälan</u></h3>
                             <p>Anmäl dig till våran email-lista för att få uppdateringar om våra produkter!</p>
                             <form method="POST" action="/">
                                 @csrf
