@@ -23,16 +23,23 @@ function toggleSidebar() {
 
 function gotoTag(tag) {
     toggleSidebar();
+    jumpTo(tag);
+}
+
+function jumpTo(tag){
     $("#wrapper").on("transitionend", function (e) {
         $(this).off(e);
-        var element = document.querySelector(tag);
-        if (element == null) return;
-        var $container = $(".container-fluid"), $scrollTo = $(tag);
-        // alert($scrollTo.offset().top + $container.scrollTop() + " " + 5 * getEmPxValue());
-        $container.animate({
-            scrollTop: $scrollTo.offset().top + $container.scrollTop() - 5 * getEmPxValue()
-        }, 1000);
+        goto(tag);
     });
+}
+
+function goto(tag) {
+    var element = document.querySelector(tag);
+    if (element == null) return;
+    var $container = $(".container-fluid"), $scrollTo = $(tag);
+    $container.animate({
+        scrollTop: $scrollTo.offset().top + $container.scrollTop() - 5 * getEmPxValue()
+    }, 1000);
 }
 
 function getEmPxValue() {
