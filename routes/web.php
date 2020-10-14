@@ -15,12 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::post('/', [SignupController::class, 'store']);
-
-Route::get('/removal', function () {
-    return view('removal');
-});
-Route::delete('/removal', [SignupController::class, 'destroy']);
+Route::get("/", function () { return view("index"); });
+Route::post("/", [SignupController::class, "store"]);
+Route::get("/removal", function () { return view("removal"); });
+Route::delete("/removal", [SignupController::class, "destroy"]);

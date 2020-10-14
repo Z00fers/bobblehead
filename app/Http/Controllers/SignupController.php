@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Signup;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SignupController extends Controller
 {
@@ -12,9 +13,15 @@ class SignupController extends Controller
         $request->validate([
             'email' => ['required', 'email', 'unique:signups,email']
         ]);
-        $signup = new Signup();
-        $signup->email = $request->input('email');
-        $signup->save();
+
+        Mail::raw("oof", function ($message) {
+            $message->to(request("email"))
+            ->subject("thinking");
+        });
+
+        // $signup = new Signup();
+        // $signup->email = $request->input('email');
+        // $signup->save();
 
         return redirect('/');
     }

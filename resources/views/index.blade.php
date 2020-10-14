@@ -98,7 +98,7 @@
                         <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
                             <object class="nav-icon" type="image/svg+xml" data="assets/icons/list.svg"></object>
                         </a>
-                        <p class="m-0 font-weight-bold"><a href="/">oof Inc</a></p>
+                        <p class="m-0 font-weight-bold">oof Inc</p>
                         <img class="logo" src="assets/icons/oof.svg" alt="logo" />
                     </nav>
                 </div>
@@ -130,42 +130,44 @@
                     <hr />
 
                     <section id="gallery">
-                        <h3 class="text-center font-weight-bold"><u>Bildgalleri</u></h3>
-                        <div id="gallery-carousel" class="carousel slide container" data-ride="carousel">
-                            <!-- fix to only desktop -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#gallery-carousel" data-slide-to="1"></li>
-                                <li data-target="#gallery-carousel" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="assets/imgs/carousel1.png" alt="placeholder1" />
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <!-- caption for desktop view -->
+                        <div class="content">
+                            <h3 class="text-center font-weight-bold"><u>Bildgalleri</u></h3>
+                            <div id="gallery-carousel" class="carousel slide container" data-ride="carousel">
+                                <!-- fix to only desktop -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#gallery-carousel" data-slide-to="1"></li>
+                                    <li data-target="#gallery-carousel" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner text-center">
+                                    <div class="carousel-item active">
+                                        <img class="img-fluid gal-img" src="assets/imgs/carousel1.png" alt="placeholder1" />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <!-- caption for desktop view -->
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid gal-img" src="assets/imgs/carousel2.png" alt="placeholder2" />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <!-- caption for desktop view -->
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid gal-img" src="assets/imgs/carousel3.png" alt="placeholder3" />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <!-- caption for desktop view -->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/imgs/carousel2.png" alt="placeholder2" />
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <!-- caption for desktop view -->
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="assets/imgs/carousel3.png" alt="placeholder3" />
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <!-- caption for desktop view -->
-                                    </div>
-                                </div>
+                                <a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
+                                    <!-- replace with svg for better color control -->
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next">
+                                    <!-- replace with svg for better color control -->
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
                             </div>
-                            <a class="carousel-control-prev" href="#gallery-carousel" role="button" data-slide="prev">
-                                <!-- replace with svg for better color control -->
-                                <span class="carousel-control-prev-icon"></span>
-                            </a>
-                            <a class="carousel-control-next" href="#gallery-carousel" role="button" data-slide="next">
-                                <!-- replace with svg for better color control -->
-                                <span class="carousel-control-next-icon"></span>
-                            </a>
                         </div>
                     </section>
 
